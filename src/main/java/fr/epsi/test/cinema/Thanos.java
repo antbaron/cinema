@@ -6,23 +6,23 @@ public class Thanos {
 	boolean missionReussi;
 
 	public Thanos(int nbPierreInfinite) {
-		if(nbPierreInfinite <=5) {
+		if(nbPierreInfinite <=6) {
 			this.nbPierreInfinite = nbPierreInfinite;
 		}else {
-			this.nbPierreInfinite = 5;
+			this.nbPierreInfinite = 6;
 		}
 		this.missionReussi = false;
 	}
 
 	public void gagnePierre() {
-		if (this.nbPierreInfinite < 5) {
+		if (this.nbPierreInfinite < 6) {
 			this.nbPierreInfinite++;
 		}
 	}
 
 	public int claquementDeDoigts(int nbPopulation) {
 		int result;
-		if (this.nbPierreInfinite == 5) {
+		if (this.nbPierreInfinite == 6) {
 			result = nbPopulation / 2;
 			this.missionReussi = true;
 		} else {
