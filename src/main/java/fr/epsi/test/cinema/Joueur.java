@@ -31,7 +31,7 @@ public class Joueur {
 		if (nom == null) {
 			if (other.nom != null)
 				return false;
-		} else if (!nom.equals(other.nom)  || nom == "Vaneloppe")
+		} else if (!nom.equals(other.nom) )
 			return false;
 		return true;
 	}
