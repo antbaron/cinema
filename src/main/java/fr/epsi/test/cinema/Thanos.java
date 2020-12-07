@@ -51,6 +51,30 @@ public class Thanos {
 	public String toString() {
 		return "Thanos [nbPierreInfinite=" + nbPierreInfinite + ", missionReussi=" + missionReussi + "]";
 	}
-	
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (missionReussi ? 1231 : 1237);
+		result = prime * result + nbPierreInfinite;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Thanos other = (Thanos) obj;
+		if (missionReussi != other.missionReussi)
+			return false;
+		if (nbPierreInfinite != other.nbPierreInfinite)
+			return false;
+		return true;
+	}
 
 }
